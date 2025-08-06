@@ -1,10 +1,10 @@
 :root {
   --primary: #000000;
-  --accent: #0070F3;
-  --background: #FFFFFF;
-  --secondary-text: #6E6E6E;
-  --border: #E5E5E5;
-  font-family: 'Inter', sans-serif;
+  --accent: #0070f3;
+  --background: #ffffff;
+  --text-secondary: #6e6e6e;
+  --border: #e5e5e5;
+  font-family: "Manrope", sans-serif;
 }
 
 * {
@@ -18,10 +18,14 @@ body {
   color: var(--primary);
   font-size: 16px;
   line-height: 1.6;
-  font-family: 'Inter', sans-serif;
+  font-family: "Manrope", sans-serif;
 }
 
 header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--background);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -74,8 +78,25 @@ section {
   color: var(--accent);
 }
 
-h1, h2, h3 {
+h1,
+h2 {
   margin-top: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+h3 {
+  margin-top: 0;
+}
+
+h1 svg,
+h2 svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--accent);
+  stroke-width: 2;
+  fill: none;
 }
 
 .highlight {
@@ -86,7 +107,7 @@ footer {
   text-align: center;
   padding: 2rem;
   font-size: 14px;
-  color: var(--secondary-text);
+  color: var(--text-secondary);
   border-top: 1px solid var(--border);
 }
 
